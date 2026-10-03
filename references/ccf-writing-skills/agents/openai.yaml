@@ -1,0 +1,4 @@
+interface:
+  display_name: "CCF Writing Skills"
+  short_description: "Write, checklist-audit, score-lift, and reviewer-proof CCF A papers."
+  default_prompt: "Use $ccf-writing-skills to plan, draft, checklist-audit, score-lift, and reviewer-proof my CCF A conference paper. Default to writing-only mode: do not change idea scope, method, experiments, results, or conclusions unless I explicitly confirm; ask before optional handoff and never invent evidence or reviewer impact."
