@@ -74,7 +74,10 @@ MIT 要求「在副本中包含版权声明与许可文本」，此前包里缺�
 | `references/ccf-writing-skills/paper_ref/best-papers/aaai-2025-every-bit-helps.pdf` | 151 KB |
 
 - agent 无法直接读取 PDF 正文（除非客户端具备文本提取）。若 CCF 的规则文件不实际引用这些 PDF，它们就是纯负重 + 许可风险。
-- **待办**：核查 `references/ccf-writing-skills/` 内哪些文件引用 `paper_ref/`；据结果决定移出仓库或 .gitignore。
+- **已决定并执行**：移出仓库（`.gitignore` 排除，本地保留）。如需重新取得，可从上游 [CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) 的 `ccf-paper-writer/paper_ref/` 取回。
+- **剩余待办**：核查 `references/ccf-writing-skills/` 内是否有文件引用 `paper_ref/`；若有，需在文档中注明该目录为可选的本地补充，否则会出现指向不存在文件的引用。
+
+> 仓库状态：已建库并推送至 `https://github.com/1105623876/awesome-ai-writing-skills`（public，67 个跟踪文件），`academic-writing` 与 `paper_ref/` 均未上传。
 
 ### B3. 6 个 SKILL.md 的发现冲突（未实测）
 
@@ -139,7 +142,9 @@ references/qu-ai-wei/SKILL.md
 
 | # | 问题 | 选项 |
 |---|---|---|
-| **Q1** | 远端仓库 `github.com/1105623876/awesome-ai-writing-skills` 当前为 **public（空仓库）**。CCF 已确认 MIT 并补齐 LICENSE，只剩 `academic-writing`（1 文件 / 0.00 MB）未声明许可。如何推？ | **A（推荐）** 保持 public，剔除 `references/academic-writing/` 并将四份文档改为「本地自备、不随仓库分发」 ／ **B** 仓库改 private，原样全推（含 academic-writing） ／ **C** 保持 public 原样推（需先取得 teamolab 授权） |
+| **Q1** | ~~academic-writing 如何推？~~ | **已决定并执行：保持 public，剔除该文件。** `references/academic-writing/` 已写入 `.gitignore`（本地保留、仓库不含），四份文档已同步改为「本地自备」。 |
+| **Q1b** | ~~CCF 的 3 篇论文 PDF 如何处理？~~ | **已决定并执行：移出仓库。** `references/ccf-writing-skills/paper_ref/` 已写入 `.gitignore`（本地保留、仓库不含）。 |
+| **Q2** | 被删的 5 个文件（`references/chinese.md`、`technical.md`、`academic.md`、`evals/cases.md`、`evals/RESULTS.md`）是否恢复？ | 从原始来源恢复 ／ 从审阅方上下文逐字重建 ／ 接受删除 |
 | **Q2** | 被删的 5 个文件（`references/chinese.md`、`technical.md`、`academic.md`、`evals/cases.md`、`evals/RESULTS.md`）是否恢复？ | 从原始来源恢复 ／ 从审阅方上下文逐字重建 ／ 接受删除 |
 | **Q3** | D1–D6 是否恢复？ | 全部恢复 ／ 仅恢复 D1+D2+D4 精简版 ／ 全部放弃（纯路由） |
 | **Q4** | `REVIEW-FINDINGS.md`（本文件）是否随仓库发布？ | 保留在仓库 ／ 加入 .gitignore ／ 发布前删除 |
