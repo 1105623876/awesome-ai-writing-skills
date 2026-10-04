@@ -41,7 +41,7 @@ Select the perspectives relevant to the request; these are reasoning lenses, not
    - add limitation.
 5. Classify each action as writing-fixable, analysis-fixable, citation/positioning, figure/table, reproducibility, requires-new-result, accepted-limitation, or venue-mismatch.
 6. Revise the draft or provide exact edit instructions.
-7. Re-review and re-score the revised version.
+7. If revision was requested, check the changed text against the identified issues. Re-score only when numerical scoring is part of the request or needed to interpret existing scores.
 8. Repeat only within the requested scope and rounds. Report remaining high-severity issues, including those requiring new results or user decisions.
 
 ## Review Form
@@ -115,9 +115,9 @@ After revision, ask:
 
 Do not call the paper ready while any central claim remains unsupported.
 
-## Score Consistency Gate
+## Score Consistency
 
-Before finalizing the review, ask:
+When reporting scores, check:
 
 1. Does the overall score match the severity of the listed weaknesses?
 2. Would the most skeptical reviewer still have a fatal concern after the proposed revision?
@@ -126,6 +126,8 @@ Before finalizing the review, ask:
 5. Does the review use the target venue's taste instead of a generic positive tone?
 
 ## Output Modes
+
+Choose the relevant items below. Rewrite only when requested; otherwise give suggestions or a brief example. Scoring and revision rounds follow the requested scope.
 
 For a full draft:
 

@@ -5,8 +5,8 @@ description: >-
   技术说明和学术稿件的起草、润色、改写与压缩；按需参考论文翻译、论文阅读、
   概念梳理与 HTML 可视化方法。保留事实、限定条件与作者语气。
   Use to answer questions, explain in plain language, edit prose, and clarify
-  tool descriptions and error messages. Apply ASD-STE100 Simplified Technical
-  English to English explanations. 不用于鉴定文本是否由 AI 生成。
+  tool descriptions and error messages. Use STE-flavored writing based on
+  ASD-STE100 Simplified Technical English for English explanations. 不用于鉴定文本是否由 AI 生成。
 license: MIT
 metadata:
   version: "0.4.2"
@@ -144,7 +144,7 @@ CCF 的 `user-custom format`、`user's exemplars` 指原作者偏好，按上面
 - 用户要求根据低分或审稿意见修改：读 [score-lifting-loop.md](references/ccf-writing-skills/references/score-lifting-loop.md)。
 - 用户要求模拟审稿：读 [expert-review-loop.md](references/ccf-writing-skills/references/expert-review-loop.md)。
 
-完整设计和其余路径见 [CCF 参考入口](references/ccf-writing-skills/source.md)。上面是可选择的方法；普通学术写作可直接完成，不必先加载 CCF。
+任务索引与其余参考路径见 [CCF 参考入口](references/ccf-writing-skills/source.md)。普通学术写作可直接完成，不必先加载 CCF。
 
 ### 翻译、阅读与概念解释
 

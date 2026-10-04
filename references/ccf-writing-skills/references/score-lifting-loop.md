@@ -4,7 +4,7 @@ Use this file when the current task concerns weak review scores or improving spe
 
 ## Core Rule
 
-Raise likely scores by fixing reviewer deductions, not by making the prose sound more positive. A claim can be strengthened only when the paper contains or can add evidence. Otherwise weaken the claim, add the missing evidence, or mark the issue as requiring new results.
+Address the reasons for reviewer deductions. Strengthen a claim only when existing evidence supports it. Planned experiments are future work, not evidence for the current claim. When evidence is insufficient, identify the gap and suggest a narrower claim. Apply that change if the user has authorized substantive revision; preserve the claim when the request is only for language polishing.
 
 Consult the relevant parts of `references/writing-checklists.md` if a systematic audit is needed; do not add a full checklist by default.
 
@@ -30,7 +30,7 @@ Consult the relevant parts of `references/writing-checklists.md` if a systematic
    - overclaim,
    - limitations/ethics gap,
    - venue mismatch.
-4. Diagnose reviewer concerns. Only score if requested or needed to interpret supplied review scores. If `ccf-conference-paper-reviewer` was requested, use its universal rubric, venue style, and score calibration files. Otherwise use the venue adapter plus the scoring table below.
+4. Diagnose reviewer concerns. Only score if requested or needed to interpret supplied review scores. `ccf-conference-paper-reviewer` is not bundled here; use it when requested and available. Otherwise use the relevant venue adapter and, when scoring is needed, the table below.
 5. Convert every deduction into a fix class:
    - writing-fixable,
    - analysis-fixable,
@@ -45,7 +45,7 @@ Consult the relevant parts of `references/writing-checklists.md` if a systematic
    - then fix central contribution and evidence alignment,
    - then improve venue-specific presentation,
    - then polish local clarity.
-7. Re-score only after checking the revised text. Report expected score lift only for concrete changes.
+7. Check the revised text against the identified issues. Re-score only when numerical scoring is needed under step 4, and tie any expected score change to concrete revisions.
 8. End at the requested revision scope or number of rounds. Report remaining evidence gaps instead of continuing until a score target is met. For a requested readiness judgment, check:
    - no central claim is unsupported,
    - no likely reviewer repeats a fatal concern,
@@ -120,6 +120,8 @@ Use these moves only when supported by the manuscript:
 - Theory: state model, assumptions, theorem novelty, proof intuition, and relation to known barriers.
 
 ## Output Format
+
+Select the fields relevant to the request. Include score fields only when numerical scoring is needed; without a user-specified target, omit the target score.
 
 ```text
 Current likely score:

@@ -46,6 +46,27 @@ cols: 2
 AM_EOF
 ````
 
+PowerShell 中，先把上面的内容稿（从 `---` 到最后一个组件）保存为 UTF-8 文件 `explanation.md`，再运行：
+
+```powershell
+$referenceDir = 'D:\path\to\ai-writing\references\answer-me-with-html'
+$amState = Join-Path ([IO.Path]::GetTempPath()) ('am-' + [guid]::NewGuid().ToString('N'))
+New-Item -ItemType Directory -Path $amState | Out-Null
+$previousAmHome = $env:AM_HOME
+$previousAmUpdateCheck = $env:AM_NO_UPDATE_CHECK
+try {
+    $env:AM_HOME = $amState
+    $env:AM_NO_UPDATE_CHECK = '1'
+    node "$referenceDir/scripts/am.mjs" render ./explanation.md --no-open --style off -o ./explanation.html
+    if ($LASTEXITCODE -ne 0) { throw 'HTML 渲染失败，请查看上方错误。' }
+} finally {
+    $env:AM_HOME = $previousAmHome
+    $env:AM_NO_UPDATE_CHECK = $previousAmUpdateCheck
+}
+```
+
+PowerShell 的 `patch / video` 调用也放在上述 `try` 块中，用 UTF-8 文件传入内容稿；执行结束后恢复原有环境变量。
+
 每次 `render / patch / video` 调用都显式设置 `AM_HOME`、`AM_NO_UPDATE_CHECK=1` 和 `--no-open`，不依赖客户端是否提供 `CLAUDE_SKILL_DIR` 或用户全局配置。`--style off` 关闭脚本自带检查，文字仍按根入口写；上游中文字符阈值不作为本项目规则。只在用户要该检查时选择 `80 / strict`，不能把它描述为官方 STE 认证。
 
 验证结束后可清理本次新建的临时状态目录，成品保存在指定输出位置。不要把 HTML 成品放在随后清理的目录。生成前检查目标重名，避免覆盖任务外文件。
@@ -119,7 +140,7 @@ AM_EOF
 
 `--panel` 匹配标题、字母 ID 或 `ID 标题`。目标不匹配、页面没有源稿时停止修改并检查，不凭猜测覆盖。补丁会写回目标页面，任务需包含该修改。
 
-运行成功后实际打开页面，检查文字、图形、路径与窄屏布局；源稿能恢复不代表布局一定正确。组件报错根据错误行与正确语法修复，不把未成功生成的路径作为成品。回复保留用户需要的答案与可点击文件链接，不固定为只有两三行。
+运行成功后，用现有预览、浏览器或截图工具检查文字、图形、路径与窄屏布局；没有可用工具时，说明未做视觉检查。`--no-open` 只关闭渲染脚本自动打开浏览器，不妨碍助手按需检查页面。组件报错根据错误行与正确语法修复，不把未成功生成的路径作为成品。回复保留用户需要的答案与可点击文件链接。
 
 ## 视频能力（仅用户明确需要时）
 
