@@ -74,10 +74,11 @@ cd awesome-ai-writing-skills
 例如，为 Codex 安装 `paper-translate`：
 
 ```sh
+mkdir -p ~/.agents/skills
 cp -a skills/paper-translate ~/.agents/skills/paper-translate
 ```
 
-为 Claude Code 安装时，把目标目录换为 `~/.claude/skills/paper-translate`。另外两个 skill 同理替换目录名。已有同名目录时先比较内容，不要直接覆盖。
+为 Claude Code 安装时，先创建 `~/.claude/skills`，再把复制目标换为 `~/.claude/skills/paper-translate`。另外两个 skill 同理替换目录名。已有同名目录时先比较内容，不要直接覆盖。
 
 这些专项 skill 会在需要时调用 PDF、图片或联网检索工具。它们会先检查当前环境中实际可用的命令；仓库不绑定某个用户名、Conda 环境或模型版本，也不会自动安装依赖。
 
