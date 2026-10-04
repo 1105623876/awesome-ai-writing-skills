@@ -1,10 +1,10 @@
 # Section Modules
 
-Use this file when drafting, rewriting, or checking a specific paper section. Always connect section writing back to `references/storyline-blueprint.md`.
+Use this file when drafting, rewriting, or checking a specific paper section. Consult `references/storyline-blueprint.md` when the whole-paper argument needs attention; local edits need only the relevant section guidance.
 
 ## Module Template
 
-For any section:
+For a section-planning or structural revision task, select the relevant steps below. These are working aids, not a required report for every edit:
 
 1. State the section role in the whole-paper story.
 2. List paragraph roles before writing.

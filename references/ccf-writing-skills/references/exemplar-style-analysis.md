@@ -124,9 +124,9 @@ Look for:
 
 ## Adaptation Output
 
-After analyzing exemplars, produce:
+For an exemplar-analysis report, select the useful outputs below. For drafting or polishing, apply the relevant techniques without adding a separate report or fixed number of findings:
 
-1. `Reference style summary`: 5-10 writing techniques.
+1. `Reference style summary`: the relevant writing techniques.
 2. `Our story alignment`: which techniques fit the user's paper.
 3. `Section pattern`: paragraph roles for the target section.
 4. `Drafting warnings`: techniques that should not be used because they would distort the user's contribution or overclaim.

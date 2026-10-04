@@ -1,12 +1,12 @@
 # Score-Lifting Loop
 
-Use this file when the user reports weak review scores, asks to improve acceptance odds, requests a pre-submission check, or wants a paper revised for AAAI/NeurIPS/ICML/ICLR/ACL/CVPR or another CCF-A venue.
+Use this file when the current task concerns weak review scores or improving specific reviewer concerns. Ordinary drafting, polishing, and venue adaptation do not require numerical scoring or a revision loop.
 
 ## Core Rule
 
 Raise likely scores by fixing reviewer deductions, not by making the prose sound more positive. A claim can be strengthened only when the paper contains or can add evidence. Otherwise weaken the claim, add the missing evidence, or mark the issue as requiring new results.
 
-Before running this loop, load `references/writing-checklists.md` and use its score-lifting and final-readiness checks.
+Consult the relevant parts of `references/writing-checklists.md` if a systematic audit is needed; do not add a full checklist by default.
 
 ## Loop
 
@@ -14,7 +14,7 @@ Before running this loop, load `references/writing-checklists.md` and use its sc
    - Venue and track.
    - Current draft state.
    - Current known review scores, if any.
-   - Target threshold: default to "no fatal reject risk and at least weak-accept stance".
+   - Target threshold: use the user's stated goal; without one, identify concrete weaknesses rather than inventing an acceptance target.
 2. Build or refresh the global story:
    - task -> gap -> root challenge -> insight -> mechanism -> evidence -> limitation.
 3. Run a reviewer deduction scan:
@@ -30,7 +30,7 @@ Before running this loop, load `references/writing-checklists.md` and use its sc
    - overclaim,
    - limitations/ethics gap,
    - venue mismatch.
-4. Score the draft. If `ccf-conference-paper-reviewer` was explicitly requested or confirmed after the optional-module gate, use its universal rubric, venue style, and score calibration files. Otherwise use the venue adapter plus the scoring table below.
+4. Diagnose reviewer concerns. Only score if requested or needed to interpret supplied review scores. If `ccf-conference-paper-reviewer` was requested, use its universal rubric, venue style, and score calibration files. Otherwise use the venue adapter plus the scoring table below.
 5. Convert every deduction into a fix class:
    - writing-fixable,
    - analysis-fixable,
@@ -46,7 +46,7 @@ Before running this loop, load `references/writing-checklists.md` and use its sc
    - then improve venue-specific presentation,
    - then polish local clarity.
 7. Re-score only after checking the revised text. Report expected score lift only for concrete changes.
-8. Stop only when:
+8. End at the requested revision scope or number of rounds. Report remaining evidence gaps instead of continuing until a score target is met. For a requested readiness judgment, check:
    - no central claim is unsupported,
    - no likely reviewer repeats a fatal concern,
    - venue-specific evidence is visible in the main paper,
@@ -54,7 +54,7 @@ Before running this loop, load `references/writing-checklists.md` and use its sc
 
 ## Fast Scoring Table
 
-Use 1-5 per criterion and 1-10 overall if no venue-specific scale is supplied:
+If numerical scoring is requested and no venue scale is supplied, 1-5 per criterion and 1-10 overall are optional illustrative scales. They are not calibrated acceptance probabilities:
 
 ```text
 Contribution / novelty:

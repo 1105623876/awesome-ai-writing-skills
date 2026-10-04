@@ -1,23 +1,23 @@
 # Exemplar Index
 
-Use this index when the user asks for CCF A-level paper writing, best-paper style, venue-specific adaptation, default user-custom writing, or examples from strong papers. Load only the cards that match the target paper. Do not load every card by default.
+Use this index when the user asks to learn writing moves from strong papers or explicitly chooses the source author's custom exemplar format. Load only the cards that match the target paper. Do not load every card by default.
 
-## Default Custom Format
+## Optional Source-Author Format
 
-When the target venue is not specified, load `references/custom-format/default-user-format.md` first. That format currently uses the user's two custom exemplar cards:
+Use `references/custom-format/default-user-format.md` only when the current user chooses that format. An unspecified venue does not activate it. The source author selected these two cards:
 
 | Role | Venue | Card | Use when |
 | --- | --- | --- | --- |
-| User custom exemplar | ICLR family | `cards/llava-4d.md` | 4D scene understanding, spatiotemporal prompts, dataset plus model papers |
-| User custom exemplar | CVPR | `cards/vggt.md` | feed-forward geometry, multi-task visual prediction, simple model versus optimization |
+| Source-author exemplar | ICLR family | `cards/llava-4d.md` | 4D scene understanding, spatiotemporal prompts, dataset plus model papers |
+| Source-author exemplar | CVPR | `cards/vggt.md` | feed-forward geometry, multi-task visual prediction, simple model versus optimization |
 
-These two cards are user-custom writing-format sources. Do not treat them as ordinary venue best-paper cards unless the user explicitly asks to compare against ICLR/CVPR best-paper style.
+These two cards are sources for the optional exemplar format, not the current user's assumed preferences. Do not treat them as ordinary venue best-paper cards unless the user explicitly asks to compare against ICLR/CVPR best-paper style.
 
 ## Selection Rule
 
 Pick at most 2-4 cards:
 
-- Use the custom-format cards first when no target venue is specified.
+- Without a target venue, select by the current topic, evidence type, and requested style; do not default to the custom-format cards.
 - Use same venue or venue family first when a target venue is specified.
 - Use same evidence type second: theorem, benchmark, user study, system, dataset, or ablation-heavy model.
 - Use same story shape third: new task, new benchmark, new model family, new capability, or new evaluation economy.
@@ -59,7 +59,7 @@ Use these cards when the user explicitly asks for ICLR/CVPR best-paper or outsta
 
 ## Recommended Bundles
 
-- Default unspecified-venue paper: load `references/custom-format/default-user-format.md`; it will select `llava-4d.md` and `vggt.md`.
+- Explicitly chosen source-author format: consult `references/custom-format/default-user-format.md` and the relevant `llava-4d.md` or `vggt.md` card.
 - 4D embodied AI paper: `llava-4d.md`, `vggt.md`, `neurips-2025-1000-layer-ssl-rl.md`.
 - ICLR-style theory or LLM paper: one ICLR recent best-paper card plus one same-topic card.
 - CVPR-style vision paper: one CVPR recent best-paper card plus `vggt.md` if the paper involves 3D geometry or multi-task prediction.
@@ -71,7 +71,7 @@ Use these cards when the user explicitly asks for ICLR/CVPR best-paper or outsta
 
 ## Output Reminder
 
-After loading cards, produce:
+For an exemplar-analysis request, the following can be useful. If the user only wants revised text, apply the relevant moves without adding a separate report:
 
 1. Chosen exemplar set and why each card fits.
 2. Transferable writing moves.

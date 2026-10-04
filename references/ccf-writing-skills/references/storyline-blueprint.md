@@ -1,10 +1,10 @@
 # Storyline Blueprint
 
-Use this before drafting and after every major section edit. CCF A writing should make the full paper story easy for reviewers to reconstruct.
+Use this when planning or repairing a paper's argument. Select the relevant fields and checks; do not require a full blueprint after every section edit. Readers should be able to reconstruct the paper's reasoning.
 
 ## Global Story Fields
 
-Fill these first:
+Use the relevant fields for a planning task; retain supplied facts and leave unknowns explicit:
 
 ```text
 Target venue:
@@ -64,9 +64,9 @@ Do not imply a stronger contribution type than the evidence supports.
 | Limitations | Bound claims | Are limitations honest but not self-defeating? |
 | Conclusion | Leave final takeaway | Does it restate insight and evidence succinctly? |
 
-## Storyline Checks After Each Section
+## Optional Storyline Checks
 
-Run these after writing or revising a section:
+For structural revisions or a requested consistency audit, select relevant checks below. Local edits do not require all maps and registers:
 
 1. Paragraph roles:
    - Assign each paragraph one role.

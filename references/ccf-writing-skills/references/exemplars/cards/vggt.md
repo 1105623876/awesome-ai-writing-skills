@@ -2,8 +2,8 @@
 
 Venue/year: CVPR 2025.
 Venue family: CVPR.
-Custom status: user-custom writing-format exemplar. This card participates in the default custom writing format when the user does not specify a target venue. VGGT is also recorded separately as the CVPR 2025 Best Paper in `cards/cvpr-2025-vggt-best-paper.md`, but this card remains the user-custom writing source.
-Source: `paper_ref/VGGT_ Visual Geometry Grounded Transformer.pdf`; CVF `https://openaccess.thecvf.com/content/CVPR2025/html/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.html`.
+Custom status: selected by the source author for an optional exemplar format. Use only when relevant to the current request; it is not a default for unspecified venues or an assumed user preference.
+Source: optional local PDF (not bundled): `paper_ref/VGGT_ Visual Geometry Grounded Transformer.pdf`; CVF `https://openaccess.thecvf.com/content/CVPR2025/html/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.html`.
 Use when: writing feed-forward vision, 3D reconstruction, multi-task prediction, model simplicity, or replacement of iterative pipelines.
 
 ## Story Pattern
@@ -43,9 +43,9 @@ The paper begins from a classic pipeline with strong priors and heavy optimizati
 - Make simplicity reviewer-facing: fewer special components can be a claim if evidence is broad.
 - Let one overview figure show input/output breadth and runtime contrast.
 
-## User Notes
+## Source-Author Notes
 
-This is one of the user's recognized exemplars. Use it for papers that want to claim a simple model can replace a complicated classical pipeline.
+This is one of the source author's selected exemplars. Use it for papers that want to claim a simple model can replace a complicated classical pipeline.
 
 ## Do-Not-Copy Boundary
 

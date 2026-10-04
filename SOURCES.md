@@ -10,7 +10,7 @@
 
 ## 原有四份参考
 
-Humanizer-zh、qu-ai-wei 和 CCF 来自维护者本地保存的副本，ASD-STE100 下载自其 GitHub 仓库。本次重构未修改这四个参考目录。
+Humanizer-zh、qu-ai-wei 和 CCF 来自维护者本地保存的副本，ASD-STE100 下载自其 GitHub 仓库。0.4.1 及此前重构未修改这四个参考目录；0.4.2 对 CCF 做了下述最小适配，其余三份继续保留。
 
 | 参考 | 版本 | 项目内入口 | 原始来源 |
 |---|---|---|---|
@@ -19,7 +19,7 @@ Humanizer-zh、qu-ai-wei 和 CCF 来自维护者本地保存的副本，ASD-STE1
 | ASD-STE100 | 0.4.0 | [source.md](references/asd-ste100/source.md) | [danyuchn/asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill)，2026-10-03 下载的 master 分支 |
 | ccf-writing-skills | 本地副本未标版本 | [source.md](references/ccf-writing-skills/source.md) | [mikubaka88/CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) 的 `ccf-paper-writer` |
 
-这些原入口此前已改名为 `source.md`，前加用途说明，原正文保留。CCF 的 `agents/openai.yaml` 改存 `source-openai.yaml`，只作来源配置记录。来源 README / CHANGELOG 加了存档说明，本地入口链接改为 `source.md`；CCF 一处个人路径改为 skill 名称，其余配套规则、例子和脚本保留。
+这些原入口此前已改名为 `source.md`，前加用途说明；除下述 CCF 适配外，原正文保留。CCF 的 `agents/openai.yaml` 改存 `source-openai.yaml`，只作来源配置记录。来源 README / CHANGELOG 加了存档说明，本地入口链接改为 `source.md`；CCF 一处个人路径改为 skill 名称，其余配套规则、例子和脚本保留。
 
 qu-ai-wei 的来源 README / CHANGELOG 提到的 `tests/` 不在维护者的本地副本中，属于上游开发记录，不是本项目可运行的测试。CCF 论文 PDF 仅本地使用，不随仓库分发。
 
@@ -53,3 +53,15 @@ qu-ai-wei 的来源 README / CHANGELOG 提到的 `tests/` 不在维护者的本�
 翻译、论文阅读、概念梳理和 HTML 都是按需方法，不是扩展出的四套默认流程。许可与署名见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 0.4.1 的一致性审阅进一步区分了讲解与改稿意见、普通聊天与文件可视化，以及英文回答、技术操作文档和学术稿件的写法；删除新参考中重复的通用文件规则。英文回答的 STE-flavored 默认与原有数字阈值保留，原有四份来源参考目录仍未修改。
+
+
+## 0.4.2：CCF 最小适配、本机发现验证与纠正后的交付
+
+CCF 改为参考入口加按需方法文件的形式，仍通过根目录 `SKILL.md` 使用，不新增可发现的技能入口。重构前的本地完整版本可在本仓库提交 `91a2969a475124cc47971c1bbe47e2f23a5d27de` 的 `references/ccf-writing-skills/` 下追溯。
+
+- `source.md` 改为使用边界、任务索引与交付说明，去掉来源的运行配置、默认私人格式、强制门检、固定报告和配套调用流程。
+- 故事线、章节、清单、评分和模拟评审参考只调整默认触发、报告要求及循环终止条件；保留具体论证方法、证据检查、问题分类与模板。
+- 自定义格式、范例索引及两份相关卡片明确为来源作者的可选方案，不把“未指定会议”当作启用条件。自定义格式的历史演示保留，但明确它不是本包的实测结果或真实研究证据。
+- 三份卡片注明 `paper_ref/` 是可选本地 PDF 路径，PDF 不随包分发；原文链接保留。其他论文卡片、会议适配资料与许可证保留。
+- 本机 Codex 0.160.0 的原生 `skills/list` 在仓库内外确认个人安装可被发现，未使用额外搜索目录；随后同一桌面会话的下一轮技能目录也列出了 `ai-writing`。模型隐式选用未单独实测；Claude Code 未安装，未实测。
+- 根据实际使用反馈，在根入口补充用户纠正方向后的交付规则，并添加自拟示例：按最终要求组织内容，排除项落实为约束，不把已放弃的方案或会话纠正经过反复写进成稿；保留影响结果与结论范围的条件，以及用户要求的比较和变更记录。README 的长期偏好示例同步更新。

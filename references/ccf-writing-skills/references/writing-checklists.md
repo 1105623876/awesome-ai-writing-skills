@@ -1,10 +1,10 @@
 # Writing Checklists
 
-Use this file to prevent omissions during planning, drafting, revision, score lifting, and final readiness checks. For small paragraph edits, run only the relevant subset and state what was intentionally skipped.
+Use this file to prevent omissions during planning, drafting, revision, score lifting, and final readiness checks. Select only the checks relevant to the current request. A paragraph edit does not require a full-paper audit or a report of skipped checks; use the status template only when the user requests an audit record.
 
 ## Intake Checklist
 
-- Target venue, track, and paper type are known, or the user-custom format is explicitly assumed.
+- Use the supplied venue, track, and paper type when relevant. If no venue is given, follow the current discipline and writing task; do not assume the source author's custom format.
 - Deadline pressure and desired output granularity are known: plan, rewrite, line edit, review, or final check.
 - Available materials are listed: manuscript, appendix, figures, tables, reviews, code, experiments, references, style exemplars.
 - Missing materials that affect confidence are named.
@@ -13,14 +13,14 @@ Use this file to prevent omissions during planning, drafting, revision, score li
 ## Venue And Style Checklist
 
 - Venue family is mapped with `ccf-a-venue-map.md` when a CCF-A target is named.
-- Venue expectations are selected from `venue-adapters.md`.
-- If no venue is named, `custom-format/default-user-format.md` is used and labeled.
+- Venue expectations are selected from `venue-adapters.md` only for a specified venue.
+- `custom-format/default-user-format.md` is used only if the current user chooses that exemplar format.
 - Exemplar cards are used only for writing moves, not wording or technical content.
 - Venue-specific evidence package is visible: baselines, ablations, proof, user study, systems evaluation, security threat model, visual evidence, or theory proof as appropriate.
 
 ## Global Story Checklist
 
-Every major output must preserve this chain:
+For method-centered papers, this chain can help check the argument. Adapt it to the contribution and discipline; do not force it onto every paragraph or paper:
 
 ```text
 task -> gap -> root challenge -> insight -> method mechanism -> evidence -> limitation
@@ -87,7 +87,7 @@ Scan for:
 
 ## Score-Lifting Checklist
 
-Use with `score-lifting-loop.md` and, only when explicitly requested or confirmed after the optional-module gate, `ccf-conference-paper-reviewer`.
+Use with `score-lifting-loop.md` when the task concerns known review scores or score diagnosis. A separate reviewer skill is optional and follows the current request; this checklist does not invoke it.
 
 - Current likely score or stance is stated.
 - Target score or readiness threshold is stated.
@@ -99,9 +99,9 @@ Use with `score-lifting-loop.md` and, only when explicitly requested or confirme
 
 ## Final Readiness Checklist
 
-Do not call a paper or section ready until:
+When asked for a final-readiness audit, check the relevant items below and report material unresolved issues. A local edit does not certify the whole paper:
 
-- The target venue/custom format is clear.
+- The intended discipline, document type, and any supplied venue/style requirements are clear.
 - The global story is internally consistent.
 - Central claims have visible support.
 - Closest prior work and strongest baselines are handled.
@@ -109,11 +109,11 @@ Do not call a paper or section ready until:
 - Limitations are honest and bounded.
 - Reproducibility and ethics details are present where relevant.
 - No high-severity issue remains unlabeled.
-- The final answer states passed checks, skipped checks, and unresolved risks.
+- The final answer states important findings and unresolved risks; a full status record is included only when requested.
 
 ## Minimal Checklist Status
 
-Use this compact status when output space is limited:
+Use this optional compact status when the user requests a checklist record:
 
 ```text
 Checklist status:

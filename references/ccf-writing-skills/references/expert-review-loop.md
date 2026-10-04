@@ -1,10 +1,10 @@
 # Expert Review Loop
 
-Use this before submission, after a full section is drafted, or whenever the user asks for reviewer-style critique. Pair it with `references/score-lifting-loop.md` when the goal is improving weak scores or acceptance odds.
+Use this when the user requests simulated reviewer critique or iterative review. Submission timing or finishing a section does not automatically activate it. Pair it with `references/score-lifting-loop.md` when the goal is improving weak scores or acceptance odds.
 
 ## Review Roles
 
-Simulate multiple reviewer perspectives:
+Select the perspectives relevant to the request; these are reasoning lenses, not instructions to spawn agents or produce a fixed number of reviews:
 
 1. Area-chair view: venue fit, contribution level, fatal risks.
 2. Method expert: soundness, novelty, assumptions, technical clarity.
@@ -19,7 +19,7 @@ Simulate multiple reviewer perspectives:
    - target venue and track,
    - likely review form or scoring scale,
    - current known scores if available,
-   - target threshold, defaulting to no fatal reject risk and at least weak-accept stance.
+   - the user's stated target or concrete concerns; do not assume a weak-accept target.
 2. Triage for fatal risks:
    - unclear contribution,
    - unsupported central claim,
@@ -29,7 +29,7 @@ Simulate multiple reviewer perspectives:
    - venue mismatch,
    - reproducibility gap,
    - ethical or policy issue.
-3. Produce expert reviews using the review form below, including numeric score, confidence, and criterion-level deductions.
+3. Produce the requested critique using relevant parts of the form below. Include numerical scores only when requested or needed to interpret existing scores.
 4. Convert each weakness into a revision action:
    - rewrite,
    - add evidence,
@@ -42,7 +42,7 @@ Simulate multiple reviewer perspectives:
 5. Classify each action as writing-fixable, analysis-fixable, citation/positioning, figure/table, reproducibility, requires-new-result, accepted-limitation, or venue-mismatch.
 6. Revise the draft or provide exact edit instructions.
 7. Re-review and re-score the revised version.
-8. Repeat until all high-severity issues are resolved, or explicitly listed as requiring new results or accepted limitations.
+8. Repeat only within the requested scope and rounds. Report remaining high-severity issues, including those requiring new results or user decisions.
 
 ## Review Form
 

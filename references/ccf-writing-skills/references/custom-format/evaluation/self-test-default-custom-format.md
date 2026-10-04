@@ -1,10 +1,12 @@
-# Self-Test: Default User-Custom Writing Format
+# Historical Example: Source-Author Format
 
-Purpose: verify that `references/custom-format/default-user-format.md` is used when no target venue is specified, that it loads the user-custom ICLR/CVPR exemplars, and that it runs a draft -> expert review -> revision -> re-review loop.
+This is an upstream simulated example, not a test result for this package. It does not establish automatic format selection, real review scores, or measured experimental results. In this package, the format and review loop require an explicit request; the invented research content below is illustrative and must not be reused as factual evidence.
+
+Original purpose: illustrate a custom-format draft -> simulated review -> revision loop. The automatic selection rule from that upstream example is no longer used.
 
 Prompt simulated: "帮我写一篇关于动态三维场景记忆的论文摘要和引言结构。"
 
-Assumption: no target venue was specified, so the user-custom writing format is active.
+Example condition in this package: the user explicitly selects the source-author format and asks for a simulated revision loop.
 
 Loaded files:
 
@@ -74,7 +76,7 @@ Remaining risks:
 
 Outcome:
 
-- The default custom format loaded the ICLR and CVPR user exemplars.
+- The illustrative custom-format example used the source author's ICLR and CVPR cards.
 - The first draft used the desired dynamic-scene and direct-output style.
 - The review loop removed a VGGT-like overclaim and clarified evidence.
-- The format is ready as a default unspecified-venue workflow, with remaining risks correctly tied to future experimental details.
+- This remains an optional demonstration; it does not certify a default workflow, submission readiness, or experimental claims.

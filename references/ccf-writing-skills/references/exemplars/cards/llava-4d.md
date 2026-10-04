@@ -2,8 +2,8 @@
 
 Venue/year: ICLR 2026.
 Venue family: ICLR.
-Custom status: user-custom writing-format exemplar. This card participates in the default custom writing format when the user does not specify a target venue.
-Source: `paper_ref/LLaVA-4D.pdf`; OpenReview `https://openreview.net/forum?id=URpbmVEsqB`; arXiv `https://arxiv.org/abs/2505.12253`.
+Custom status: selected by the source author for an optional exemplar format. Use only when relevant to the current request; it is not a default for unspecified venues or an assumed user preference.
+Source: optional local PDF (not bundled): `paper_ref/LLaVA-4D.pdf`; OpenReview `https://openreview.net/forum?id=URpbmVEsqB`; arXiv `https://arxiv.org/abs/2505.12253`.
 Use when: writing multimodal, 3D/4D scene, embodied AI, prompt-embedding, or dataset plus model papers.
 
 ## Story Pattern
@@ -44,9 +44,9 @@ Broad success in 2D multimodal understanding is narrowed to a physical-world fai
 - Convert an observation into a design decision, then into a contribution bullet.
 - Make the first figure carry both motivation and evidence.
 
-## User Notes
+## Source-Author Notes
 
-This is one of the user's recognized exemplars. Use it especially when the user's paper needs to justify a new representation for dynamic scenes.
+This is one of the source author's selected exemplars. Use it especially when the user's paper needs to justify a new representation for dynamic scenes.
 
 ## Do-Not-Copy Boundary
 

@@ -1,7 +1,7 @@
 # Every Bit Helps
 
 Venue/year: AAAI 2025.
-Source: `paper_ref/best-papers/aaai-2025-every-bit-helps.pdf`; AAAI OJS `https://ojs.aaai.org/index.php/AAAI/article/view/33507`.
+Source: optional local PDF (not bundled): `paper_ref/best-papers/aaai-2025-every-bit-helps.pdf`; AAAI OJS `https://ojs.aaai.org/index.php/AAAI/article/view/33507`.
 Use when: writing theory, social choice, multi-agent systems, elicitation, approximation, or parameterized optimality papers.
 
 ## Story Pattern
