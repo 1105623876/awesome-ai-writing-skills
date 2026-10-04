@@ -1,15 +1,8 @@
 # Awesome AI Writing Skills
 
-给 Codex、Claude Code 等 AI 助手使用的中文写作与论文阅读 skills。仓库根目录仍是可独立安装的 `ai-writing`；`skills/` 目录收录三个可分别安装的专项 skill。
+给 Codex、Claude Code 等 AI 助手使用的一套写作、阅读与解释方法。整个仓库只安装为一个 `ai-writing` skill：根目录 `SKILL.md` 统一处理用户要求，`references/` 保存八份按需读取的方法、例子与工具。
 
-| Skill | 目录 | 用途 |
-|---|---|---|
-| `ai-writing` | 仓库根目录 | 回答、解释、起草、润色、压缩与结构调整 |
-| `paper-translate` | [`skills/paper-translate/`](skills/paper-translate/) | CV / CS / LLM 英文论文的严格英中对照翻译 |
-| `paper-well-know` | [`skills/paper-well-know/`](skills/paper-well-know/) | 单篇论文精读与图文中文梳理报告 |
-| `concept-well-know` | [`skills/concept-well-know/`](skills/concept-well-know/) | 计算机概念、公式、发展脉络与横向对比文档 |
-
-下面先介绍根目录的 `ai-writing`。
+长期回复习惯放在 `AGENTS.md` / `CLAUDE.md` 的 preference 中，具体任务通过 `ai-writing` 入口选择参考。不把每份参考注册成独立入口，也不让安装一个写作 skill 变成每次执行一整套报告流程。
 
 例如，这句通知：
 
@@ -58,29 +51,11 @@ Claude Code 把目标目录换成上表中的 `.claude/skills/ai-writing/`。两
 
 新建会话，确认客户端能发现 `ai-writing`，再要求“使用 ai-writing”。安装时请保留整个 `references/` 目录，助手会从中读取具体规则和示例。包内只有根目录的 `SKILL.md` 是 skill 入口，各参考原来的入口都改存为普通文档 `source.md`。
 
-其他支持 [Agent Skills](https://agentskills.io/specification) 的助手，请按各自的说明安装。当前版本为 0.3.0，尚未分别在 Codex 和 Claude Code 中实测自动加载。
+其他支持 [Agent Skills](https://agentskills.io/specification) 的助手，请按各自的说明安装。当前版本为 0.4.0，尚未分别在 Codex 和 Claude Code 中实测自动加载。
 
-## 安装专项 skills
+原 `skills/` 下的三个专项入口已经移入 `references/`，入口名改为 `source.md`，并按本项目规则改写。安装时保留整个仓库，不再分别安装这三个目录。已有旧版独立安装的专项 skill 不会因更新本仓库自动移除；请在客户端确认实际加载的是哪个入口，避免旧规则同时生效。
 
-`skills/` 下的三个目录都是独立 skill，安装时要把选中的整个目录复制到代理的 skills 目录，不能只复制 `SKILL.md`，也不能把 `skills/` 本身当成一个 skill。包含 `references/` 的目录必须完整保留。
-
-先克隆仓库：
-
-```sh
-git clone https://github.com/1105623876/awesome-ai-writing-skills.git
-cd awesome-ai-writing-skills
-```
-
-例如，为 Codex 安装 `paper-translate`：
-
-```sh
-mkdir -p ~/.agents/skills
-cp -a skills/paper-translate ~/.agents/skills/paper-translate
-```
-
-为 Claude Code 安装时，先创建 `~/.claude/skills`，再把复制目标换为 `~/.claude/skills/paper-translate`。另外两个 skill 同理替换目录名。已有同名目录时先比较内容，不要直接覆盖。
-
-这些专项 skill 会在需要时调用 PDF、图片或联网检索工具。它们会先检查当前环境中实际可用的命令；仓库不绑定某个用户名、Conda 环境或模型版本，也不会自动安装依赖。
+HTML 参考附有单文件渲染脚本；只有决定生成页面且已有 Node.js 20+ 时才使用。普通写作不需要 Node，也不会因此自动安装依赖、打开浏览器或修改个人配置。
 
 ## 让助手平时回复也说人话
 
@@ -141,21 +116,43 @@ Use ai-writing. Explain how X works, about 80% of the way to ASD-STE100.
 
 这里的“去 AI 味”指修改套话、重复和不自然的表达，不保证检测器结果或论文录用。
 
-## 包含哪些规则
+## 按场景选择参考
 
-回答、解释、指导和改稿共用一套写作方法，见 [SKILL.md](SKILL.md)。遇到拿不准的写法、特殊语体或具体句式时，助手会按任务读取对应参考：
+通用写作规则见 [SKILL.md](SKILL.md)。助手按当前问题或点名指令选择相关部分，允许组合方法，不一次加载所有资料。
 
-- [qu-ai-wei](references/qu-ai-wei/source.md)：简体中文去 AI 味。保留 51 类模式、九种语体、行业用词、标点规则、主动打磨方法和完整示例。
-- [Humanizer-zh](references/humanizer-zh/source.md)：24 类常见写法的诊断与改写，包括套话、宣传腔、助手腔、句式节奏和作者个性。
-- [ASD-STE100](references/asd-ste100/source.md)：英文技术说明和英文回答、解释。回答默认用 STE-flavored（八成 STE），技术操作指令用 Strict；保留具体规则、示例及附带的检查脚本。
-- [ccf-writing-skills](references/ccf-writing-skills/source.md)：计算机会议论文写作，包含章节方法、论文示例、会议要求和审稿修改流程。来源为 [CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) 的 `ccf-paper-writer`（MIT）。
+| 场景或指令 | 参考 | 主要内容 |
+|---|---|---|
+| 中文语体、句法、套话与修辞 | [qu-ai-wei](references/qu-ai-wei/source.md) | 51 类模式、九种语体、例外与完整示例 |
+| 点名 Humanizer-zh，或补充诊断 | [Humanizer-zh](references/humanizer-zh/source.md) | 24 类写法与作者语气的处理 |
+| 英文回答和技术说明 | [ASD-STE100](references/asd-ste100/source.md) | STE-flavored / Strict、规则、例子与可选检查脚本 |
+| 论文章节与论证组织 | [ccf-writing-skills](references/ccf-writing-skills/source.md) | 问题、贡献、证据、会议适配与论文卡片 |
+| 论文或技术材料翻译 | [paper-translate](references/paper-translate/source.md) | 忠实翻译、可选对照、长文接续与图表处理 |
+| 理解或评价单篇论文 | [paper-well-know](references/paper-well-know/source.md) | 来源、方法与证据分析、可选笔记结构 |
+| 解释概念、比较方法或梳理方向 | [concept-well-know](references/concept-well-know/source.md) | 概念关系、例子、可选数学核对与配图 |
+| HTML 页面或适合可视化的复杂关系 | [answer-me-with-html](references/answer-me-with-html/source.md) | 内容组织、组件与可选渲染器 |
 
-一般论文、综述和学位论文的写作由总入口处理，需要具体章节方法时读取 CCF 参考，并按学科和稿件要求使用。
+例如：
 
-CCF 的论文写作卡片已包含在仓库中。三篇论文 PDF 由使用者本地提供，可放在 `references/ccf-writing-skills/paper_ref/`；卡片也附有论文原文链接。
+```text
+使用 ai-writing，参考 paper-translate 翻译这段摘要，只要中文译文。
+```
 
-各参考保留了完整的方法和例子。你也可以指定要参考哪份，比如“按 Humanizer-zh 改，保留我的语气，只给成稿”。
+```text
+使用 ai-writing，参考 paper-well-know 解释 Eq.3 的含义，说明原文与补充解释的区别。
+```
 
-本 skill 回答问题时直接回答，改稿时默认直接给成稿。qu-ai-wei 的真人／AI 门检，以及参考里的强制报告、评分和配套调用，都不默认执行；想看改动说明或对照，直接提出即可。发现论断超出现有证据，或字数等要求与必须保留的内容冲突时，会用一两句话指出问题，不擅自改动事实和论断强度。
+```text
+使用 ai-writing，参考 concept-well-know，用生活例子讲清楚动量，不用公式。
+```
 
-来源与版本见 [SOURCES.md](SOURCES.md)。本项目编写的入口和说明采用 [MIT 许可证](LICENSE)，参考文件的署名与许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。复制时请一并保留。
+```text
+使用 ai-writing，把这几个模块的关系讲清楚，保存成一页 HTML。
+```
+
+这些参考名称用于选择方法，不是需要另外安装的命令；已有客户端是否支持同名斜杠命令，由其实际配置决定。翻译不默认附生词表，概念解释不默认生成文件，论文笔记不固定五段，复杂回答不按数量自动生成 HTML。用户要对照、评分、系统报告或核对记录时，再按其要求展开。
+
+原有四份参考保留具体方法、例子与例外；新引入的四份作了适配改写，原版可从记录的 Git 来源追溯。一般论文、综述和学位论文由总入口处理，CCF 方法按当前学科使用，不强加计算机会议模板。CCF 卡片已随仓库提供；三篇论文 PDF 由使用者本地提供，可放在 `references/ccf-writing-skills/paper_ref/`，卡片也附原文链接。
+
+发现论断超出现有证据，或字数等要求与必须保留的内容冲突时，会指出具体问题，不擅自改动事实和论断强度。参考中的门检、强制报告、固定打分、自审轮次和配套调用不默认执行，也不在后台暗中执行。
+
+来源、固定版本与改写范围见 [SOURCES.md](SOURCES.md)。本项目编写的入口和说明采用 [MIT 许可证](LICENSE)，参考文件与捆绑渲染器的署名、许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。复制时请一并保留。
