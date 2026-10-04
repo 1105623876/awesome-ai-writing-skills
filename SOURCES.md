@@ -1,5 +1,19 @@
 # 参考来源
 
+## 本仓库维护的专项 skills
+
+以下三个入口及其配套参考文档由本仓库贡献者维护，位于 `skills/`，不包含论文 PDF、API 凭证或本机环境文件：
+
+| Skill | 项目内目录 | 说明 |
+|---|---|---|
+| paper-translate | [skills/paper-translate/](skills/paper-translate/) | 论文英中严格对照翻译 |
+| paper-well-know | [skills/paper-well-know/](skills/paper-well-know/) | 单篇论文精读报告 |
+| concept-well-know | [skills/concept-well-know/](skills/concept-well-know/) | 方向或概念的公式化梳理 |
+
+公开版本移除了个人主目录、固定 Conda 环境、固定模型版本等本机假设；外部论文和网页只在使用时由用户提供或按用户请求读取，不随仓库分发。
+
+## `ai-writing` 的参考来源
+
 Humanizer-zh、qu-ai-wei 和 CCF 写作 skill 来自本项目维护者本地保存的副本，ASD-STE100 下载自其 GitHub 仓库。各参考的具体规则与示例保存在 `references/` 下。CCF 的三篇论文 PDF 仅在本地使用，不随仓库分发。
 
 | 参考 | 版本 | 项目内文件 | 原始来源 |
@@ -9,7 +23,7 @@ Humanizer-zh、qu-ai-wei 和 CCF 写作 skill 来自本项目维护者本地保�
 | ASD-STE100 | 0.4.0 | [source.md](references/asd-ste100/source.md) | [danyuchn/asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill)，2026-10-03 下载的 master 分支 |
 | ccf-writing-skills | 本地副本未标版本 | [source.md](references/ccf-writing-skills/source.md) | [mikubaka88/CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills) 的 `ccf-paper-writer`，MIT（Copyright (c) 2026 Chaoyue Li） |
 
-## 怎样整合
+## `ai-writing` 怎样整合
 
 [SKILL.md](SKILL.md) 统一处理回答、解释、写作指导、起草、润色、压缩和结构调整。中文的语体、句法与修辞主要参考 qu-ai-wei，Humanizer-zh 补充常见套话与句式诊断；英文回答和解释默认采用 ASD-STE100 参考的 STE-flavored 模式，技术操作指令采用 Strict；论文章节和论证组织参考 CCF 写作 skill。一般学术写作由本入口处理，需要时读取适用的章节参考。
 
