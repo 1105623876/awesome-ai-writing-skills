@@ -1,3 +1,5 @@
+> 上游文档存档，安装说明与开发流程描述的是原项目。使用本整合技能请看[项目 README](../../README.md)；原入口已保存为同目录的 `source.md`。
+
 # ASD-STE100 Skill — Simplified Technical English for Agent Output
 
 A Claude Code skill that rewrites dense, ambiguous English into [ASD-STE100 Simplified Technical English](https://www.asd-ste100.org/) (STE) — the controlled-language standard the aerospace and defense industry built so aircraft maintenance instructions cannot be misread.

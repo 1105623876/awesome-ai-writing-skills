@@ -1,3 +1,5 @@
+> 上游文档存档，安装说明与开发流程描述的是原项目。使用本整合技能请看[项目 README](../../README.md)；原入口已保存为同目录的 `source.md`。
+
 # 去 AI 味（qu-ai-wei）
 
 [![Version](https://img.shields.io/badge/version-0.6.6-blue.svg)](https://github.com/hzblacksmith/qu-ai-wei/releases)
@@ -115,7 +117,7 @@ bash scripts/install-skill.sh --to ~/.my-agent/skills --name qu-ai-wei
 
 ### 其他支持自定义指令的模型（ChatGPT / DeepSeek / Kimi / 通义 等）
 
-把 [`SKILL.md`](./SKILL.md) 的正文直接粘到模型的自定义指令或系统提示里，跳过顶部 `---` 包起来的 YAML frontmatter 那段。
+把 [`SKILL.md`](./source.md) 的正文直接粘到模型的自定义指令或系统提示里，跳过顶部 `---` 包起来的 YAML frontmatter 那段。
 
 ## 升级
 
@@ -270,7 +272,7 @@ LLM 常把英文句法直接套到中文上。单句读着像中文，一连读�
 
 ## 51 类模式一览（精简版）
 
-完整规则、触发条件和“原文/改后”示例请看 [`SKILL.md`](./SKILL.md)。README 这里保留目录级速览，方便先判断是否覆盖你的场景。
+完整规则、触发条件和“原文/改后”示例请看 [`SKILL.md`](./source.md)。README 这里保留目录级速览，方便先判断是否覆盖你的场景。
 
 | 类别 | 范围 | 关注点 |
 |---|---|---|
@@ -287,9 +289,9 @@ LLM 常把英文句法直接套到中文上。单句读着像中文，一连读�
 
 常见入口：
 
-- 全规则与触发细节：[`SKILL.md`](./SKILL.md)
-- 完整流程：[`SKILL.md` 的处理流程](./SKILL.md#处理流程)
-- 完整样例：[`SKILL.md` 的完整示例](./SKILL.md#完整示例)
+- 全规则与触发细节：[`SKILL.md`](./source.md)
+- 完整流程：[`SKILL.md` 的处理流程](./source.md#处理流程)
+- 完整样例：[`SKILL.md` 的完整示例](./source.md#完整示例)
 
 ---
 ## 完整示例
@@ -344,14 +346,14 @@ LLM 常把英文句法直接套到中文上。单句读着像中文，一连读�
 `改动摘要（可选）`
 - 主要命中：#1/#2（意义拔高与背景开场套话）、#7（高频商务词）、#30/#31（冗余与抽象空词）、#37（模板化结构）。
 
-更多完整样例见 [SKILL.md](./SKILL.md#完整示例)。
+更多完整样例见 [SKILL.md](./source.md#完整示例)。
 
 ---
 
 ## 给贡献者 / 自己维护的几条提醒
 
 1. **改了 SKILL.md / references/ / README 后，把自己动过的散文段落**喂给 qu-ai-wei 自检一遍。规则条目里那些结构化 metadata（问题 / 关键词 / 原文 / 改后 / 语体限定）是**给模型读的骨架，别 humanize** —— 去掉对称反而让模型看不清规则长什么样。**只对解释性散文跑。**
-2. **加新规则时检查会不会跟既有规则冲突 / 重叠**。比如"抽象万能动词"跟 #7 AI 高频词、#30 冗余书面化都相邻，要说清楚各自管的是什么。新规则写进 [`references/patterns.md`](./references/patterns.md)（不拆子文件,保留 A-I 跨规则 interlock）,同时在 [SKILL.md](./SKILL.md) 末尾的「51 条 AI 腔模式 · 索引表」里补一行速查。
+2. **加新规则时检查会不会跟既有规则冲突 / 重叠**。比如"抽象万能动词"跟 #7 AI 高频词、#30 冗余书面化都相邻，要说清楚各自管的是什么。新规则写进 [`references/patterns.md`](./references/patterns.md)（不拆子文件,保留 A-I 跨规则 interlock）,同时在 [SKILL.md](./source.md) 末尾的「51 条 AI 腔模式 · 索引表」里补一行速查。
 3. **所有例子都要有"原文 / 改后"对**。单给判断标准没有示范，模型抓不准。
 4. **版本号凡升，README 的版本记录、CHANGELOG.md 和 SKILL.md frontmatter 同改**。改完顺手跑 `bash tests/check-version-sync.sh`，让 README / flat build / changelog 一次过。
 5. **改 SKILL.md 或 references/ 后,commit 前跑一遍 [`scripts/build-flat.sh`](./scripts/build-flat.sh)**,它会从 SKILL.md + references/ 自动拍平生成 `.cursorrules` 和 `WARP.md`。Cursor / Windsurf / Warp 不支持 progressive disclosure,必须用单文件。三份文件漂移是最常见的 bug,脚本是单一事实来源(把这一行放在第 4 条之后,不是第 6 条之后,因为它比《咬文嚼字》刷新频次高)。

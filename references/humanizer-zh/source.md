@@ -1,3 +1,5 @@
+> humanizer-zh 的原入口存档。写作时按[本项目入口](../../SKILL.md)使用其中的方法和例子；原技能的触发、门检、报告、配套调用与安装流程不自动执行。以下正文保留原样。
+
 ---
 name: humanizer-zh
 description: |

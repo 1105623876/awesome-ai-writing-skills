@@ -1,3 +1,5 @@
+> ccf-writing-skills 的原入口存档。写作时按[本项目入口](../../SKILL.md)使用其中的方法和例子；原技能的触发、门检、报告、配套调用与安装流程不自动执行。以下正文保留原样。
+
 ---
 name: ccf-writing-skills
 description: "Plan, draft, revise, score-lift, checklist-audit, and reviewer-proof research papers for CCF A-class conferences. Use when the user wants to write, polish, improve weak review scores, raise acceptance odds, adapt a paper to NeurIPS, ICML, ICLR, AAAI, ACL, CVPR, ICCV, SIGMOD, KDD, SIGCOMM, CCS, CHI, or similar CCF A venues, extract writing techniques from selected strong papers without copying content, build section-level storylines, check claim-evidence alignment, run final-readiness checklists, or run expert-review and revision loops before submission."

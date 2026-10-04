@@ -6,8 +6,5 @@ desktop.ini
 *.bak
 *~
 
-# 未声明许可证，不随仓库分发（本地自备）
-references/academic-writing/
-
 # 第三方论文 PDF，版权归作者/出版方（本地自备）
 references/ccf-writing-skills/paper_ref/

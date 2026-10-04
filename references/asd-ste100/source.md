@@ -1,3 +1,5 @@
+> asd-ste100 的原入口存档。写作时按[本项目入口](../../SKILL.md)使用其中的方法和例子；原技能的触发、门检、报告、配套调用与安装流程不自动执行。以下正文保留原样。
+
 ---
 name: asd-ste100
 description: "Use when English text must be parsed without a human to resolve ambiguity — tool descriptions, error messages, inter-agent instructions, system prompts, status reports — and misreading has a real cost, or when text reads as dense, hedged, or easy to misparse. Triggers: disambiguate, STE100 rewrite, apply Simplified Technical English, plain-language rewrite, controlled-language rewrite, rewrite so an agent cannot misread this. Not for creative or marketing copy."
