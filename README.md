@@ -1,6 +1,8 @@
 # Awesome AI Writing Skills
 
-给 Codex、Claude Code 等 AI 助手使用的一套写作、阅读与解释方法。整个仓库只安装为一个 `ai-writing` skill：根目录 `SKILL.md` 统一处理用户要求，`references/` 保存八份按需读取的方法、例子与工具。
+让 AI 在回答、讲解、写文章和写论文时说人话：内容具体，读者跟得上，句子自然，事实与条件准确。学术稿件保留专业性，正式文本保留合适的礼貌与语气。
+
+整个仓库只安装为一个 `ai-writing` skill：根目录 `SKILL.md` 统一处理用户要求，`references/` 保存八份来源参考和本项目的写作例子，按需读取。
 
 长期回复习惯放在 `AGENTS.md` / `CLAUDE.md` 的 preference 中，具体任务通过 `ai-writing` 入口选择参考。不把每份参考注册成独立入口，也不让安装一个写作 skill 变成每次执行一整套报告流程。
 
@@ -51,7 +53,7 @@ Claude Code 把目标目录换成上表中的 `.claude/skills/ai-writing/`。两
 
 新建会话，确认客户端能发现 `ai-writing`，再要求“使用 ai-writing”。安装时请保留整个 `references/` 目录，助手会从中读取具体规则和示例。包内只有根目录的 `SKILL.md` 是 skill 入口，各参考原来的入口都改存为普通文档 `source.md`。
 
-其他支持 [Agent Skills](https://agentskills.io/specification) 的助手，请按各自的说明安装。当前版本为 0.4.0，尚未分别在 Codex 和 Claude Code 中实测自动加载。
+其他支持 [Agent Skills](https://agentskills.io/specification) 的助手，请按各自的说明安装。当前版本为 0.4.1，尚未分别在 Codex 和 Claude Code 中实测自动加载。
 
 原 `skills/` 下的三个专项入口已经移入 `references/`，入口名改为 `source.md`，并按本项目规则改写。安装时保留整个仓库，不再分别安装这三个目录。已有旧版独立安装的专项 skill 不会因更新本仓库自动移除；请在客户端确认实际加载的是哪个入口，避免旧规则同时生效。
 
@@ -62,12 +64,14 @@ HTML 参考附有单文件渲染脚本；只有决定生成页面且已有 Node.
 安装 skill 不等于每次回复都会加载它。想长期使用这套回复习惯，可以把下面这段放入 Codex 的 `AGENTS.md` 或 Claude Code 的 `CLAUDE.md`：
 
 ```text
-回复我时使用 ai-writing 的回答和解释规则：先给答案，再补必要的理由、例子和条件。
-不复述问题，不写空泛铺垫，不加客套结尾。回答长短跟着问题走，术语保持一致。
+回答、讲解、起草和改稿时使用 ai-writing 的通用写法：内容具体，读者能跟上，句子自然。
+回答先回应问题；讲解说明机制，必要时举例；文章和论文按读者、材料与文体组织。
+不复述问题，不写空泛铺垫，不加客套结尾。长短跟着任务走，术语保持一致。
 英文回答默认用 STE-flavored（八成 STE）：操作句不超过 20 词，说明句不超过 25 词，
 名词连用不超过 3 词，一段不超过 6 句；多用主动表达和简单时态，不锁定词典词义。
 中文只借短句、一句一事、主动表达和术语一致等原则，不套英文词数。
-准确表达优先，不能为缩短句子删掉条件或不确定性。用户指定的文体和格式优先。
+准确表达优先，不能为缩短句子删掉条件或不确定性。文章、邮件和论文按文体写，
+不默认套技术手册的句长限制。用户指定的语气、文体和格式优先。
 需要完整规则和例子时，读取已安装的 ai-writing/SKILL.md 及对应参考。
 ```
 
@@ -102,7 +106,7 @@ and the difference between may, should, and must: ...
 ```
 
 ```text
-Use ai-writing. Explain how X works, about 80% of the way to ASD-STE100.
+Use ai-writing. Explain how X works in STE-flavored style.
 ```
 
 ```text
@@ -119,6 +123,8 @@ Use ai-writing. Explain how X works, about 80% of the way to ASD-STE100.
 ## 按场景选择参考
 
 通用写作规则见 [SKILL.md](SKILL.md)。助手按当前问题或点名指令选择相关部分，允许组合方法，不一次加载所有资料。
+
+[回答、讲解、文章与论文的自拟例子](references/plain-language-examples.md)展示具体改法。例子用于理解选择，不规定统一文风、结构或数字配额。
 
 | 场景或指令 | 参考 | 主要内容 |
 |---|---|---|
