@@ -1,5 +1,7 @@
 # 第三方来源与许可
 
+`skills/paper-translate/`、`skills/paper-well-know/` 和 `skills/concept-well-know/` 不捆绑论文、标准正文或其他第三方二进制文件。它们描述的论文、网页、字体和命令行工具只在使用时按用户指令访问，其各自许可不因本仓库的 MIT 许可证而改变。
+
 `references/` 保存以下参考 skill 的来源材料。来源、版本和整合方式见 [SOURCES.md](SOURCES.md)，各项目原有的版权声明与许可证随文件保留。本项目的 MIT 许可证适用于本项目编写的入口和说明，不替代参考材料各自的许可。
 
 ## MIT 项目

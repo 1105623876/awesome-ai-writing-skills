@@ -1,6 +1,15 @@
-# AI Writing
+# Awesome AI Writing Skills
 
-给 Codex、Claude Code 等 AI 助手用的写作 skill。用于回答问题、解释概念、给论文意见，也可以根据材料起草文章和邮件，修改中英文稿件，删套话、理顺段落、压缩篇幅。修改时保留事实和作者的语气，不编造细节。
+给 Codex、Claude Code 等 AI 助手使用的中文写作与论文阅读 skills。仓库根目录仍是可独立安装的 `ai-writing`；`skills/` 目录收录三个可分别安装的专项 skill。
+
+| Skill | 目录 | 用途 |
+|---|---|---|
+| `ai-writing` | 仓库根目录 | 回答、解释、起草、润色、压缩与结构调整 |
+| `paper-translate` | [`skills/paper-translate/`](skills/paper-translate/) | CV / CS / LLM 英文论文的严格英中对照翻译 |
+| `paper-well-know` | [`skills/paper-well-know/`](skills/paper-well-know/) | 单篇论文精读与图文中文梳理报告 |
+| `concept-well-know` | [`skills/concept-well-know/`](skills/concept-well-know/) | 计算机概念、公式、发展脉络与横向对比文档 |
+
+下面先介绍根目录的 `ai-writing`。
 
 例如，这句通知：
 
@@ -22,7 +31,7 @@
 ……
 ```
 
-## 安装
+## 安装 `ai-writing`
 
 在下表中选择一个位置，新建 `ai-writing` 文件夹，把本项目的内容完整复制进去。最终应能找到 `ai-writing/SKILL.md`，不能多嵌套一层项目目录。已有同名 skill 时，先比较内容再决定是否替换。
 
@@ -50,6 +59,27 @@ Claude Code 把目标目录换成上表中的 `.claude/skills/ai-writing/`。两
 新建会话，确认客户端能发现 `ai-writing`，再要求“使用 ai-writing”。安装时请保留整个 `references/` 目录，助手会从中读取具体规则和示例。包内只有根目录的 `SKILL.md` 是 skill 入口，各参考原来的入口都改存为普通文档 `source.md`。
 
 其他支持 [Agent Skills](https://agentskills.io/specification) 的助手，请按各自的说明安装。当前版本为 0.3.0，尚未分别在 Codex 和 Claude Code 中实测自动加载。
+
+## 安装专项 skills
+
+`skills/` 下的三个目录都是独立 skill，安装时要把选中的整个目录复制到代理的 skills 目录，不能只复制 `SKILL.md`，也不能把 `skills/` 本身当成一个 skill。包含 `references/` 的目录必须完整保留。
+
+先克隆仓库：
+
+```sh
+git clone https://github.com/1105623876/awesome-ai-writing-skills.git
+cd awesome-ai-writing-skills
+```
+
+例如，为 Codex 安装 `paper-translate`：
+
+```sh
+cp -a skills/paper-translate ~/.agents/skills/paper-translate
+```
+
+为 Claude Code 安装时，把目标目录换为 `~/.claude/skills/paper-translate`。另外两个 skill 同理替换目录名。已有同名目录时先比较内容，不要直接覆盖。
+
+这些专项 skill 会在需要时调用 PDF、图片或联网检索工具。它们会先检查当前环境中实际可用的命令；仓库不绑定某个用户名、Conda 环境或模型版本，也不会自动安装依赖。
 
 ## 让助手平时回复也说人话
 
