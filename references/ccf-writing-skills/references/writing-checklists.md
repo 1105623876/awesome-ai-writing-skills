@@ -66,9 +66,9 @@ Required action:
 
 Rules:
 
-- Supported claims may be sharpened.
-- Weakly supported claims must be narrowed or tied to stronger evidence.
-- Unsupported claims must be removed, weakened, or marked as requiring new evidence.
+- During language polishing, preserve claim strength and flag evidence gaps separately. Apply substantive claim changes only within the user's authorized revision scope.
+- Supported claims may be sharpened within that scope.
+- For weakly supported or unsupported claims, identify the evidence gap and suggest narrower wording, removal, or stronger evidence as appropriate.
 - Evidence hidden only in the appendix must be signposted in the main text.
 
 ## Reviewer-Risk Checklist
@@ -93,12 +93,12 @@ Scan for:
 
 Use with `score-lifting-loop.md` when the task concerns known review scores or score diagnosis. A separate reviewer skill is optional and follows the current request; this checklist does not invoke it.
 
-- Current likely score or stance is stated.
-- Target score or readiness threshold is stated.
+- Current stance or key reviewer concerns are stated; include a numerical score only when requested or needed to interpret existing scores.
+- Target score or readiness threshold is stated only when supplied by the user; otherwise omit it.
 - Top score blockers are ranked by severity.
 - Each blocker has a fix class: writing-fixable, analysis-fixable, citation/positioning, figure/table, reproducibility, requires-new-result, accepted-limitation, or venue-mismatch.
 - Writing-only fixes are separated from fixes requiring new experiments, proofs, studies, or baselines.
-- Expected score impact is attached only to concrete changes.
+- When numerical scoring is relevant, expected score impact is attached only to concrete changes.
 - After revision, the same reviewer concern is re-tested.
 
 ## Final Readiness Checklist
