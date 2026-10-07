@@ -1,6 +1,6 @@
 # CCF 论文写作参考入口
 
-本目录来自 `ccf-writing-skills` 的本地副本，原始版本与改写记录见 [SOURCES.md](../../SOURCES.md)。本文件按本项目的按需加载方式改写；具体写作方法、检查项与范例保存在下方参考中。
+本目录选用新版 CCFA 的逐句改写方法，以及方法论文的引言、相关工作、方法、实验与图表写法；会议资料、论文卡片和按需审阅参考沿用旧版本地副本。各文件来源与版本见 [SOURCES.md](../../SOURCES.md)；不是整个 CCFA 工具集的镜像。旧版的通用故事线参考已移除，可在 Git 历史中追溯。
 
 本仓库唯一的 skill 入口是根目录 `SKILL.md`。本文件只帮助选择论文写作参考，不注册独立 skill，也不自动调用配套技能。
 
@@ -11,8 +11,7 @@
 - 润色默认保留研究问题、方法、实验设置、数字与结论。用户明确要求改进研究方案时，可在该范围内提出修改，不必重复索要同一授权；建议与已经完成的事实分开。
 - 不编造结果、引用、实验、基线或录用前景。论断超出证据时，指出缺口并建议收窄；用户已授权按证据修订时直接修改，只要求语言润色时保留论断。
 - 参考论文用于学习段落作用、解释顺序和证据呈现，不复制其措辞、技术内容或贡献。来源作者选择的范例不等于当前用户的偏好。
-- 按当前问题选择相关文件和部分。小段改稿直接交付改稿；整篇规划可以展开论证结构。清单、数值评分、模拟评审和多轮修订只在当前任务需要或用户要求时采用，不作为每次交稿的门检。
-- 配套技能的名称仅作来源说明。是否使用其他技能由当前用户请求与根入口决定，不继承来源配置中的默认调用和许可流程。
+- 按当前问题选择相关文件和部分。小段改稿直接交付改稿，保留原有组织；起草或重组时再选择结构。清单、数值评分、模拟评审和多轮修订用于用户要求的审阅任务，不作为每次交稿的门检。
 
 ## 按任务选择参考
 
@@ -20,11 +19,11 @@
 
 | 当前需要 | 参考 | 用法 |
 |---|---|---|
-| 理清论文主线、贡献与证据 | [storyline-blueprint.md](references/storyline-blueprint.md) | 选择适合该研究的论证结构；不用强制填完所有字段 |
-| 起草或修改某个章节 | [section-modules.md](references/section-modules.md) | 按章节取方法，检查局部表达与全文一致性 |
+| 删掉防御性套话，写清研究本身 | [humanization.md](references/humanization.md) | 逐句找出事实、机制、条件或推断，再决定怎样改；保留有用的否定和不确定性 |
+| 方法论文的引言、相关工作，以及方法、实验与图表表述 | [section-modules.md](references/section-modules.md) | 查对应部分的具体问题、引用方法与例子 |
+| 摘要、以发现为主的引言、Results、Discussion 或正文压缩 | [Nature 章节参考](../nature-writing/source.md) | 按当前章节的问题选择，不默认套发现型论文顺序 |
 | 适配已指定的 CCF 会议 | [ccf-a-venue-map.md](references/ccf-a-venue-map.md)、[venue-adapters.md](references/venue-adapters.md) | 选择对应领域的关注点；具体投稿规则以当前会议说明为准 |
 | 用户要求借鉴强论文写法 | [exemplars/index.md](references/exemplars/index.md)、[exemplar-style-analysis.md](references/exemplar-style-analysis.md) | 先选相关卡片，再提取可迁移的写作方法 |
-| 用户明确选择来源作者的范例格式 | [default-user-format.md](references/custom-format/default-user-format.md) | 可选范例方案；文件名保留用于追溯，不代表默认格式 |
 | 用户要求系统检查或投稿前审阅 | [writing-checklists.md](references/writing-checklists.md) | 选择相关检查项，交付重要发现，不强制逐项汇报 |
 | 根据真实评审或已知弱项改稿 | [score-lifting-loop.md](references/score-lifting-loop.md) | 排序可修复的问题，区分写作修改与需要新证据的工作 |
 | 用户要求模拟评审或反复修订 | [expert-review-loop.md](references/expert-review-loop.md) | 按要求选择视角与轮次；没有评分要求时可只给具体意见 |

@@ -2,7 +2,7 @@
 
 让 AI 在回答、讲解、写文章和写论文时说人话：内容具体，读者跟得上，句子自然，事实与条件准确。学术稿件保留专业性，正式文本保留合适的礼貌与语气。
 
-整个仓库只安装为一个 `ai-writing` skill：根目录 `SKILL.md` 统一处理用户要求，`references/` 保存八份来源参考和本项目的写作例子，按需读取。
+整个仓库只安装为一个 `ai-writing` skill：根目录 `SKILL.md` 统一处理用户要求，`references/` 保存九份来源参考和本项目的写作例子，按需读取。
 
 长期回复偏好写在 `AGENTS.md` / `CLAUDE.md` 中，具体任务通过 `ai-writing` 入口选择参考。参考按需读取，不分别安装，也不要求每次写作都输出报告。
 
@@ -53,7 +53,7 @@ Claude Code 把目标目录换成上表中的 `.claude/skills/ai-writing/`。两
 
 新建会话，确认客户端能发现 `ai-writing`，再要求“使用 ai-writing”。安装时请保留整个 `references/` 目录，助手会从中读取具体规则和示例。包内只有根目录的 `SKILL.md` 是 skill 入口，各参考原来的入口都改存为普通文档 `source.md`。
 
-其他支持 [Agent Skills](https://agentskills.io/specification) 的助手，请按各自的说明安装。当前版本为 0.4.2。
+其他支持 [Agent Skills](https://agentskills.io/specification) 的助手，请按各自的说明安装。当前版本为 0.5.0。
 
 2026-10-04 在 macOS 的 Codex 0.160.0 中实测：安装到 `~/.agents/skills/ai-writing/` 后，本机 App Server 的 `skills/list` 在本仓库目录和仓库外目录都发现了一个已启用的 `ai-writing`，作用域为个人技能（`user`），本包没有解析错误。测试未配置额外搜索目录，也未把参考注册成独立 skill。发现接口见 [OpenAI 官方文档](https://learn.chatgpt.com/docs/app-server)。
 
@@ -137,7 +137,8 @@ Use ai-writing. Explain how X works in STE-flavored style.
 | 中文语体、句法、套话与修辞 | [qu-ai-wei](references/qu-ai-wei/source.md) | 51 类模式、九种语体、例外与完整示例 |
 | 点名 Humanizer-zh，或补充诊断 | [Humanizer-zh](references/humanizer-zh/source.md) | 24 类写法与作者语气的处理 |
 | 英文回答和技术说明 | [ASD-STE100](references/asd-ste100/source.md) | STE-flavored / Strict、规则、例子与可选检查脚本 |
-| 论文章节与论证组织 | [ccf-writing-skills](references/ccf-writing-skills/source.md) | 问题、贡献、证据、会议适配与论文卡片 |
+| 摘要、引言、Results、Discussion 与正文取舍 | [nature-writing](references/nature-writing/source.md) | 章节分工、证据组织、论断分寸与补充材料安排 |
+| 论文逐句去套话、方法论文章节与计算机会议 | [ccf-writing-skills](references/ccf-writing-skills/source.md) | 防御性句子改写、引言与相关工作、方法与实验、会议适配与论文卡片 |
 | 论文或技术材料翻译 | [paper-translate](references/paper-translate/source.md) | 忠实翻译、可选对照、长文接续与图表处理 |
 | 理解或评价单篇论文 | [paper-well-know](references/paper-well-know/source.md) | 来源、方法与证据分析、可选笔记结构 |
 | 解释概念、比较方法或梳理方向 | [concept-well-know](references/concept-well-know/source.md) | 概念关系、例子、可选数学核对与配图 |
@@ -163,7 +164,7 @@ Use ai-writing. Explain how X works in STE-flavored style.
 
 这些参考名称用于选择方法，不是需要另外安装的命令；已有客户端是否支持同名斜杠命令，由其实际配置决定。翻译不默认附生词表，概念解释不默认生成文件，论文笔记不固定五段，复杂回答不按数量自动生成 HTML。用户要对照、评分、系统报告或核对记录时，再按其要求展开。
 
-原有参考保留具体方法、例子与例外；CCF 的参考入口及涉及默认触发的说明作了最小适配，新引入的四份也作了适配改写，原版可从记录的 Git 来源追溯。一般论文、综述和学位论文由总入口处理，CCF 方法按当前学科使用，不强加计算机会议模板。CCF 卡片已随仓库提供；三篇论文 PDF 由使用者本地提供，可放在 `references/ccf-writing-skills/paper_ref/`，卡片也附原文链接。
+原有参考保留具体方法、例子与例外；CCF 的论文写作方法在 0.5.0 换成新版的逐句改写与章节方法，旧的通用故事线已移除；新引入的五份也作了适配改写，原版可从记录的 Git 来源追溯。一般论文、综述和学位论文由总入口处理。局部润色保留原稿结构，只有要求起草或重组时才借用章节方法；Nature 与 CCF 方法都不当作统一论文模板，也不强加计算机会议结构。CCF 卡片已随仓库提供；三篇论文 PDF 由使用者本地提供，可放在 `references/ccf-writing-skills/paper_ref/`，卡片也附原文链接。
 
 发现论断超出现有证据，或字数等要求与必须保留的内容冲突时，会指出具体问题，不擅自改动事实和论断强度。参考中的门检、强制报告、固定打分、自审轮次和配套调用不默认执行，也不在后台暗中执行。
 

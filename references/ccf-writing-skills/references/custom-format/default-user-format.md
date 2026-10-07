@@ -46,7 +46,7 @@ Method:
 - Define inputs and outputs before architecture.
 - Explain the representation or token family before fusion or training details.
 - Separate model, data, training, and inference if all exist.
-- Use module names that reflect reviewer-facing function.
+- Use module names that reflect each module's role in the method.
 
 Experiments:
 
@@ -73,7 +73,7 @@ For a requested full format-and-review demonstration, the following are possible
 
 1. Explicitly chosen exemplar format.
 2. Loaded custom exemplars.
-3. Global story blueprint.
+3. Story outline.
 4. Draft or revision.
 5. Claim-evidence map.
 6. Review score and critique.

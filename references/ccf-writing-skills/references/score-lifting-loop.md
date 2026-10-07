@@ -15,8 +15,7 @@ Consult the relevant parts of `references/writing-checklists.md` if a systematic
    - Current draft state.
    - Current known review scores, if any.
    - Target threshold: use the user's stated goal; without one, identify concrete weaknesses rather than inventing an acceptance target.
-2. Build or refresh the global story:
-   - task -> gap -> root challenge -> insight -> mechanism -> evidence -> limitation.
+2. Identify the central contribution and the evidence that carries it. Organize around the contribution actually present; do not rebuild the paper on a fixed task-gap-insight chain.
 3. Run a reviewer deduction scan:
    - contribution unclear,
    - novelty weak,
@@ -40,7 +39,7 @@ Consult the relevant parts of `references/writing-checklists.md` if a systematic
    - requires-new-result,
    - accepted-limitation,
    - venue-mismatch.
-6. Revise in priority order:
+6. Revise in priority order. Resolve a concern by making the evidence, protocol, or scope visible where the reader needs it; put the full answer to each reviewer in the response letter. Replace or merge existing text before appending, as in section 4 of [main-text-discipline.md](../../nature-writing/references/main-text-discipline.md), and do not add reassurance or caveats aimed at reviewers:
    - first resolve fatal or high-severity issues,
    - then fix central contribution and evidence alignment,
    - then improve venue-specific presentation,
@@ -103,7 +102,7 @@ Use these moves only when supported by the manuscript:
 - Replace broad claims with scoped, testable claims.
 - Explain why the method works, not just that it performs well.
 - Move decisive evidence into the main text or signpost appendix evidence clearly.
-- Add figure/table captions that state what a reviewer should learn.
+- Add figure/table captions that state what a reader should learn.
 - Make limitations precise so they bound risk instead of weakening the whole paper.
 - Align Abstract, Introduction, Experiments, and Conclusion claims.
 

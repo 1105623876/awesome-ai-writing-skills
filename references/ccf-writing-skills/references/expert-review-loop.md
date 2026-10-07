@@ -38,9 +38,9 @@ Select the perspectives relevant to the request; these are reasoning lenses, not
    - add citation,
    - reorganize section,
    - improve figure/table,
-   - add limitation.
+   - state a material boundary where it changes interpretation.
 5. Classify each action as writing-fixable, analysis-fixable, citation/positioning, figure/table, reproducibility, requires-new-result, accepted-limitation, or venue-mismatch.
-6. Revise the draft or provide exact edit instructions.
+6. Revise the draft or provide exact edit instructions. The critique may be skeptical; the revised paper should not be. Resolve a concern by stating the evidence, protocol, or scope in the paper's own voice, and keep rebuttal-style reassurance for the response letter (see [humanization.md](humanization.md)).
 7. If revision was requested, check the changed text against the identified issues. Re-score only when numerical scoring is part of the request or needed to interpret existing scores.
 8. Repeat only within the requested scope and rounds. Report remaining high-severity issues, including those requiring new results or user decisions.
 
@@ -148,4 +148,4 @@ For a paragraph:
 1. Identify paragraph role.
 2. Give one or two key problems.
 3. Provide a revised paragraph.
-4. Explain which reviewer risk the revision reduces.
+4. Explain which concern the revision resolves.

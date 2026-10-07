@@ -9,7 +9,7 @@ description: >-
   ASD-STE100 Simplified Technical English for English explanations. 不用于鉴定文本是否由 AI 生成。
 license: MIT
 metadata:
-  version: "0.4.2"
+  version: "0.5.0"
 ---
 
 # AI Writing
@@ -98,9 +98,15 @@ STE-flavored 在本项目中简称“八成 STE”，是写法约定，不是官
 
 论断超出现有证据时，指出具体问题并给出收窄的写法。用户已授权按证据修订时直接处理；只要求语言润色时不擅自改变论断。不能靠润色补出结果和引文。中文论文去套话时，先查 qu-ai-wei 的学术语体例外，必要的术语、名词化和逻辑连接不能按口语标准删除。
 
-CCF 参考用于学习问题、方法、贡献和证据之间的写法，章节组织仍按当前学科与用户的稿件要求。不要把计算机会议的实验结构强加给其他学科。
+局部润色沿用原有组织，只处理当前段落的问题；用户要求起草、重组或诊断结构时，再借用章节方法。
 
-CCF 的 `user-custom format`、`user's exemplars` 指原作者偏好，按上面的参考边界处理。当前用户选择范例时再用相应格式和卡片；沿用当前稿件的 Markdown、LaTeX、引用键与投稿格式。
+起草或重组时，先找出这项工作最值得读者记住的东西：一个发现、一种新能力、一个方法上的想法或一份资源。标题、摘要、引言和各章节围绕它展开，最有力的证据放在前面，次要结果用来支撑它或压缩掉。主要论断选证据最站得住的那一面：方法在精度上不占优、在速度或成本上明显领先，就以速度或成本为主线，精度照实报告，不围绕一个赢不了的指标组织全文。按最终成立的逻辑叙述，不写成“先做了什么、后来又试了什么”的工作汇报。写发现、方法、理论、资源或综述，各按实际贡献组织，不强造“研究空白—洞见—机制”的故事，也不要求每段都有转折、局限或升华。
+
+证据支持的论断按证据能承受的强度直接写，不用自谦、预判审稿人或层层限定去削弱。适用范围在影响解释的位置说一次；局限写在它改变结论的地方，不在每段、每节末尾重复。负面判断同样按证据定强度：不把局部的弱结果写成方法的普遍缺陷，不替论文揽下它没有声称的责任，也不主动提出与核心论断无关、现有证据又回答不了的问题。根据审稿意见修改时，完整答复写进回复信，正文只改读者需要的部分，先替换或合并已有句子，再考虑新增。
+
+小节按论证单元划分：一个小节回答读者的一个问题，撑不起一两段的内容并入相邻部分。不为每个模块、每组实验或每条局限单开小节，也不用一串加粗标签代替段落。会议模板、期刊或用户要求的章节照常保留。
+
+Nature 参考提供摘要、引言、Results、Discussion 与正文取舍的方法，CCF 补充具体改句、方法论文的引言与相关工作、方法与实验写法，以及计算机会议资料。它们不是统一论文模板；Nature 语料归纳不是期刊规定，计算机会议的实验结构也不适用于所有学科。沿用当前稿件的 Markdown、LaTeX、引用键与投稿格式；用户选择范例时再读相应卡片。
 
 ## 参考索引
 
@@ -136,15 +142,20 @@ CCF 的 `user-custom format`、`user's exemplars` 指原作者偏好，按上面
 
 ### 学术写作
 
-- 安排论证：读 [storyline-blueprint.md](references/ccf-writing-skills/references/storyline-blueprint.md) 的 `Core Story Arc`、`Contribution Types` 和 `Storyline Failure Signals`。
-- 需要具体章节方法时：读 [section-modules.md](references/ccf-writing-skills/references/section-modules.md) 对应章节。
+- 句子空泛、防御性强、反复预判审稿人：读 [humanization.md](references/ccf-writing-skills/references/humanization.md) 的逐句判断、中英改写和例外；有用的否定、负面结果和不确定性保留。
+- 摘要的论证不清：读 [nature-abstract.md](references/nature-writing/references/nature-abstract.md)，它也适用于方法、资源和理论论文的取舍。
+- 引言的论证不清：以发现或问题为主的论文读 [nature-introduction.md](references/nature-writing/references/nature-introduction.md)；方法、模型或系统论文投计算机会议，或原稿已按“贡献列表”写法组织，读 [section-modules.md](references/ccf-writing-skills/references/section-modules.md) 的 `Introduction For Method Papers`。两者都不为局部润色整套加载。
+- 相关工作只罗列文献、引文写法生硬或没写清与最接近工作的区别：读 [section-modules.md](references/ccf-writing-skills/references/section-modules.md) 的 `Related Work`。
+- Results 顺序或 Discussion 重复结果：读 [nature-results-discussion.md](references/nature-writing/references/nature-results-discussion.md)；需要区分解释、外推与论断强度时读 [discussion-argument-language.md](references/nature-writing/references/discussion-argument-language.md)。
+- 正文太满、证据重复或需安排正文与补充材料：读 [main-text-discipline.md](references/nature-writing/references/main-text-discipline.md)。移动内容须符合改稿范围和实际格式，不能把不利结果藏进补充材料。
+- 方法、实验或图表文字不清：读 [section-modules.md](references/ccf-writing-skills/references/section-modules.md) 的 `Method`、`Experiments` 或 `Figures And Tables`。
 - 用户指定计算机会议：用 [ccf-a-venue-map.md](references/ccf-writing-skills/references/ccf-a-venue-map.md) 定位类别，再读 [venue-adapters.md](references/ccf-writing-skills/references/venue-adapters.md) 的对应内容。
 - 用户指定论文范例：从[论文卡片索引](references/ccf-writing-skills/references/exemplars/index.md)查找。需要核对论文内容时读全文，不把卡片当成已读过全文。
 - 用户要求投稿前查漏：读 [writing-checklists.md](references/ccf-writing-skills/references/writing-checklists.md) 的相关部分。
 - 用户要求根据低分或审稿意见修改：读 [score-lifting-loop.md](references/ccf-writing-skills/references/score-lifting-loop.md)。
 - 用户要求模拟审稿：读 [expert-review-loop.md](references/ccf-writing-skills/references/expert-review-loop.md)。
 
-任务索引与其余参考路径见 [CCF 参考入口](references/ccf-writing-skills/source.md)。普通学术写作可直接完成，不必先加载 CCF。
+选取范围见 [Nature 参考说明](references/nature-writing/source.md)和 [CCF 参考说明](references/ccf-writing-skills/source.md)。普通学术写作可直接完成，不必先读这些索引或规划全文。
 
 ### 翻译、阅读与概念解释
 

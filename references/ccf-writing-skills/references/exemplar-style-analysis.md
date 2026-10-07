@@ -59,10 +59,10 @@ Reference papers must not provide:
    - how the paragraph opens,
    - what contrast or causal relation it uses,
    - where it places evidence,
-   - how it reduces reviewer uncertainty,
+   - how it makes the claim credible to the reader,
    - how it transitions to the next paragraph.
 4. Compare multiple papers and synthesize common patterns. Prefer patterns repeated across papers over one paper's idiosyncratic style.
-5. Adapt the pattern to the user's story blueprint, not the other way around.
+5. Adapt the pattern to the user's actual contribution and evidence, not the other way around. Skip moves, such as an insight sentence or a root-cause paragraph, that the user's material does not support.
 
 ## Extraction Table
 
@@ -76,7 +76,7 @@ Paragraph role:
 Writing move:
 Transition pattern:
 Evidence pattern:
-Why this works for reviewers:
+Why this works for readers:
 Reusable technique:
 How to adapt to our paper:
 Do-not-copy boundary:

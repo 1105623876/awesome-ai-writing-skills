@@ -11,7 +11,7 @@
 | [asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill) | Copyright (c) 2026 Dustin Yuchen Teng | [LICENSE](references/asd-ste100/LICENSE) |
 | [Humanizer-zh](https://github.com/op7418/Humanizer-zh) | Copyright (c) 2026 歸藏 | [LICENSE](references/humanizer-zh/LICENSE) |
 | [qu-ai-wei](https://github.com/hzblacksmith/qu-ai-wei) | Copyright (c) 2026 Frank Li | [LICENSE](references/qu-ai-wei/LICENSE) |
-| [CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills)（收录其 `ccf-paper-writer` skill，置于 `references/ccf-writing-skills/`） | Copyright (c) 2026 Chaoyue Li | [LICENSE](references/ccf-writing-skills/LICENSE) |
+| [CCFA-Skills](https://github.com/mikubaka88/CCFA-Skills)（收录其 `ccf-paper-writer` skill 及 `ccf-humanization` 的改写参考，置于 `references/ccf-writing-skills/`） | Copyright (c) 2026 Chaoyue Li | [LICENSE](references/ccf-writing-skills/LICENSE) |
 | [answer-me-with-html](https://github.com/QingYunA/answer-me-with-html)（参考与捆绑渲染器） | Copyright (c) 2026 Answer me with HTML contributors | [LICENSE](references/answer-me-with-html/LICENSE) |
 | [humanizer](https://github.com/blader/humanizer) | Copyright (c) 2025 Siqi Chen | [LICENSE](https://github.com/blader/humanizer/blob/main/LICENSE)；中文参考声明的上游 |
 | [stop-slop](https://github.com/hardikpandya/stop-slop) | Copyright (c) 2025 Hardik Pandya | [LICENSE](https://github.com/hardikpandya/stop-slop/blob/main/LICENSE)；Humanizer-zh 声明的参考 |
@@ -39,6 +39,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## Apache-2.0 项目
+
+[nature-skills](https://github.com/Yuan1z0825/nature-skills) 的 `skills/nature-shared/core/` 中五份文件经改写后置于 `references/nature-writing/references/`，采用 Apache License 2.0，许可全文见 [LICENSE](references/nature-writing/LICENSE)。上游仓库未附 NOTICE 文件。按该许可第 4 条，每个改写文件开头注明了来源提交和修改范围，选取与改写说明见 [SOURCES.md](SOURCES.md)。本项目的 MIT 许可不替代 Apache-2.0 对这些文件的约束。
 
 ## 其他材料
 

@@ -21,7 +21,7 @@ Pick at most 2-4 cards:
 - Use same venue or venue family first when a target venue is specified.
 - Use same evidence type second: theorem, benchmark, user study, system, dataset, or ablation-heavy model.
 - Use same story shape third: new task, new benchmark, new model family, new capability, or new evaluation economy.
-- Add one contrast card only when it improves reviewer-proofing.
+- Add one contrast card only when it clarifies what the user's paper should or should not borrow.
 
 Use cards to borrow writing moves, not claims, wordings, examples, or technical content.
 

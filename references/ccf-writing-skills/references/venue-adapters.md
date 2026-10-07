@@ -2,6 +2,8 @@
 
 Use this file after identifying the target CCF A family. Treat it as a writing-priority selector, not as a substitute for the official call for papers.
 
+The reviewer questions below show which evidence a venue expects to see. Answer them by making that evidence visible in the paper. Do not write sentences addressed to reviewers, pre-empt each question in the text, or add caveats to look safe.
+
 ## Universal CCF A Review Priorities
 
 For any CCF A target, make these visible:
@@ -170,7 +172,7 @@ Common reviewer questions:
 
 ## Venue Plan Template
 
-Use this compact plan before drafting:
+When the user asks for a venue plan, or a full draft needs one, this compact form can help. It is not a prerequisite for drafting or polishing:
 
 ```text
 Target venue:

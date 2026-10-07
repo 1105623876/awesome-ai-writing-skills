@@ -18,23 +18,27 @@ Use this file to prevent omissions during planning, drafting, revision, score li
 - Exemplar cards are used only for writing moves, not wording or technical content.
 - Venue-specific evidence package is visible: baselines, ablations, proof, user study, systems evaluation, security threat model, visual evidence, or theory proof as appropriate.
 
-## Global Story Checklist
+## Whole-Paper Argument Checklist
 
-For method-centered papers, this chain can help check the argument. Adapt it to the contribution and discipline; do not force it onto every paragraph or paper:
-
-```text
-task -> gap -> root challenge -> insight -> method mechanism -> evidence -> limitation
-```
+Organize the argument around the contribution actually present: a finding, method, theory, resource, benchmark, protocol, system, or user-study insight. Do not imply a stronger contribution type than the evidence supports, and do not recast an accurate, ordinary contribution as a grand story.
 
 Check:
 
 - The problem is concrete enough for the venue's audience.
-- The gap explains why prior work is insufficient.
-- The root challenge is technical, scientific, empirical, or human-centered, not just "existing methods fail."
-- The insight explains why the proposed method should work.
-- The method mechanism connects to the insight.
+- Where the paper claims a gap, it explains why prior work leaves it open, not just "existing methods fail."
+- The method, theory, or resource connects to that problem.
 - The evidence package tests the central claim.
-- The limitation bounds the claim honestly.
+- Material boundaries are stated where they change interpretation.
+
+Signals that the structure needs revision:
+
+- The method appears before the reader understands the problem.
+- The paper sells a module but experiments validate only the whole pipeline.
+- The Abstract claims broad improvement but experiments cover a narrow setting.
+- Related Work hides the strongest competitor.
+- Experiments introduce claims never promised earlier.
+- The conclusion adds new claims.
+- Figures show many details but no clear message.
 
 ## Section Revision Checklist
 
@@ -44,7 +48,7 @@ Check:
 - Terminology is stable across sections.
 - Transitions show cause, contrast, consequence, refinement, or example.
 - Figures and tables are introduced before interpretation.
-- Captions state what the reviewer should learn.
+- Captions state what the reader should learn.
 - The section ends with the intended next-step logic when appropriate.
 
 ## Claim-Evidence Checklist

@@ -12,7 +12,7 @@ Loaded references:
 - `references/exemplars/cards/llava-4d.md`
 - `references/exemplars/cards/vggt.md`
 - `references/exemplars/cards/neurips-2025-1000-layer-ssl-rl.md`
-- `references/storyline-blueprint.md`
+- `references/storyline-blueprint.md` (removed from this package in 0.5.0; available in Git history)
 - `references/expert-review-loop.md`
 
 ## Draft Pass 1
